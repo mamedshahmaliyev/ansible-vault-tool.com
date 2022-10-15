@@ -1,0 +1,13 @@
+version: "3"
+
+services:
+  ansible-vault:
+    build:
+      context: ..
+      dockerfile: docker/Dockerfile
+    container_name: ansible-vault
+    # volumes:
+    #   - ./..:/usr/src/app
+    ports:
+     - "3003:3000"
+    restart: unless-stopped
